@@ -1,0 +1,91 @@
+/*===========================
+   CHOOSE css 
+===========================*/
+.choose-us-area {
+	margin-top: -190px;
+	padding-top: 313px;
+	padding-bottom: 123px;
+	position: relative;
+	z-index: 10;
+	& .choose-us-content {
+		& .choose-us-content-item {
+			& span {
+				font-size: 16px;
+				color: $theme-color;
+				font-weight: 700;
+				font-family: $pop;
+				padding-bottom: 16px;
+			}
+			& .title {
+				font-size: 48px;
+				line-height: 60px;
+				padding-bottom: 17px;
+				@media #{$lg} {
+					font-size: 40px;
+					line-height: 50px;
+				}
+				@media #{$md} {
+					font-size: 40px;
+					line-height: 50px;
+				}
+				@media #{$xs} {
+					font-size: 28px;
+					line-height: 38px;
+				}
+				@media #{$sm} {
+					font-size: 40px;
+					line-height: 50px;
+				}
+			}
+			& p {
+				padding-bottom: 50px;
+			}
+		}
+		& .choose-item {
+			& .choose-item-1 {
+				width: 50%;
+				& i {
+					height: 70px;
+					width: 70px;
+					text-align: center;
+					line-height: 70px;
+					background: #b7e3ce;
+					border-radius: 50%;
+					font-size: 38px;
+					color: $heading-color;
+					margin-bottom: 25px;
+				}
+				& p {
+					padding-right: 20px;
+					padding-top: 15px;
+					@media #{$md} {
+						padding-right: 100px;
+					}
+				}
+				&.choose-item-2 {
+					& i {
+						background: #ede0b3;
+					}
+				}
+			}
+		}
+	}
+	& .choose-thumb {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		@media #{$md} {
+			display: none;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+		& img {
+			width: 75%;
+			@media #{$lg} {
+				width: 60%;
+			}
+		}
+	}
+}

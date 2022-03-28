@@ -1,0 +1,123 @@
+/*===========================
+    SERVICE css 
+===========================*/
+.services-area {
+	padding-top: 127px;
+	& .services-item {
+		& .services-thumb {
+			& img {
+				width: 100%;
+			}
+		}
+		& .services-content {
+			border: 1px solid #dcdfe2;
+			border-top: 0;
+			padding: 35px 30px 40px;
+			& .title {
+				font-size: 22px;
+				@include transition(0.3s);
+			}
+			& p {
+				font-size: 15px;
+				line-height: 27px;
+				padding-top: 16px;
+				padding-bottom: 20px;
+			}
+			& a {
+				font-size: 15px;
+				font-weight: 700;
+				font-family: $pop;
+				color: $heading-color;
+				& i {
+					height: 45px;
+					width: 45px;
+					background: $white;
+					text-align: center;
+					line-height: 45px;
+					color: $heading-color;
+					margin-left: 18px;
+					@include transition(0.3s);
+				}
+			}
+		}
+		&:hover {
+			& .services-content {
+				& .title {
+					color: $theme-color;
+				}
+				& a {
+					& i {
+						background: $theme-color;
+						color: $white;
+						box-shadow: 0px 10px 30px 0px rgba(39, 158, 100, 0.5);
+					}
+				}
+			}
+		}
+	}
+	&.services-area-two {
+		padding-top: 130px;
+		background-color: #eff2f7;
+		background-image: url(../images/service-bg.jpg);
+		background-position: center;
+		background-size: cover;
+		.services-item-2 {
+			background-color: transparent;
+			border: 1px solid #dcdfe2;
+			border-radius: 5px;
+			padding: 30px 55px 55px 55px;
+			@media #{$lg} {
+				padding: 25px;
+			}
+			@include transition(0.3s);
+			.services-thumb {
+				font-size: 80px;
+				position: relative;
+				z-index: 1;
+				margin-bottom: 30px;
+				color: $theme-color;
+				@include transition(0.3s);
+				.icon-shape {
+					position: absolute;
+					left: 50px;
+					z-index: -1;
+					@include transition(0.3s);
+				}
+			}
+			.services-content {
+				padding: 0;
+				border: none;
+				i {
+					background: transparent;
+				}
+				&,
+				.title,
+				p,
+				i,
+				a {
+					@include transition(0.3s);
+				}
+			}
+			&.active {
+				background-color: $theme-color;
+				.services-thumb {
+					color: $white;
+					.icon-shape {
+						opacity: 0.15;
+					}
+				}
+				.services-content {
+					.title,
+					a,
+					p {
+						color: $white;
+					}
+					i {
+						box-shadow: none;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+/*===========================
+    Breadcrumb css
+===========================*/
+.breadcrumbs-section {
+	position: relative;
+	z-index: 1;
+	.breadcrumbs-text {
+		text-align: center;
+		&,
+		a,
+		h1 {
+			color: $white;
+			font-family: $pop;
+			font-weight: 700;
+		}
+		h1 {
+			font-size: 70px;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+			position: relative;
+			&::before {
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				background-color: $white;
+				height: 2px;
+				width: 80px;
+				content: '';
+			}
+			@media #{$xs} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+		ul {
+			li {
+				display: inline-block;
+				position: relative;
+				font-size: 15px;
+				margin-right: 6px;
+				padding-right: 5px;
+				&::after {
+					position: absolute;
+					right: -5px;
+					top: 50%;
+					content: '/';
+					color: $white;
+					font-family: $pop;
+					font-weight: 700;
+					font-size: 14px;
+					transform: translateY(-50%);
+				}
+				&:last-child {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		background-color: $heading-color;
+		z-index: -1;
+		opacity: 0.6;
+	}
+}

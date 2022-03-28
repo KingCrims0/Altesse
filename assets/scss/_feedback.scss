@@ -1,0 +1,161 @@
+/*===========================
+    FEEDBACK css 
+===========================*/
+.feedback-area {
+	padding-top: 123px;
+	& .section-title {
+		& .title {
+			font-size: 40px;
+			line-height: 50px;
+			@media #{$xs} {
+				font-size: 28px;
+				line-height: 38px;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+	}
+	& .feedback-item {
+		& .feedback-content {
+			padding: 26px 40px;
+			@media #{$md} {
+				padding: 26px 28px;
+			}
+			@media #{$xs} {
+				padding: 26px 24px;
+			}
+			& p {
+				@media #{$md} {
+					font-size: 16px;
+				}
+			}
+		}
+		& i {
+			font-size: 44px;
+			color: #e3e5e6;
+		}
+	}
+	& .feedback-info {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border-top: 1px solid #dcdfe2;
+		position: relative;
+		padding-left: 120px;
+		@media #{$xs} {
+			padding-left: 100px;
+		}
+		& img {
+			position: absolute;
+			left: 40px;
+			top: 50%;
+			transform: translateY(-50%);
+			@media #{$xs} {
+				left: 20px;
+			}
+		}
+	}
+	& .feedback-active {
+		& .slick-arrow {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 55px;
+			width: 55px;
+			text-align: center;
+			line-height: 55px;
+			border-radius: 50%;
+			background: $white;
+			top: -160px;
+			font-size: 15px;
+			cursor: pointer;
+			@include transition(0.3s);
+			&:hover {
+				background: $theme-color;
+				color: $white;
+			}
+			&.prev {
+				right: 70px;
+			}
+		}
+		&.about-page {
+			.slick-arrow {
+				top: 50%;
+				transform: translateY(-50%);
+				right: -25px;
+				z-index: 1;
+				box-shadow: 0px 10px 30px 0px rgba(0, 15, 56, 0.1);
+				color: $heading-color;
+				&:hover {
+					color: $white;
+				}
+				@media #{$md} {
+					right: -15px;
+				}
+				@media #{$xs} {
+					right: -15px;
+				}
+			}
+
+			.slick-arrow.prev {
+				right: auto;
+				left: -25px;
+				@media #{$md} {
+					left: -15px;
+					right: auto;
+				}
+				@media #{$xs} {
+					left: -15px;
+					right: auto;
+				}
+			}
+		}
+	}
+	&.feedback-area-two {
+		.section-title {
+			span,
+			.title {
+				color: $white;
+			}
+		}
+		.feedback-item {
+			position: relative;
+			min-height: 380px;
+			border-radius: 3px;
+			padding: 40px 292px 40px 40px;
+			@media #{$lg} {
+				padding: 40px 190px 40px 40px;
+			}
+			@media #{$xs} {
+				padding: 40px;
+			}
+			.feedback-content,
+			.feedback-info {
+				padding: 0;
+			}
+			.feedback-info {
+				margin-top: 35px;
+				border: none;
+				h5 {
+					font-size: 22px;
+					margin-bottom: 10px;
+				}
+				span {
+					font-size: 15px;
+				}
+			}
+			.feedback-img {
+				position: absolute;
+				bottom: 0;
+				right: 15px;
+				@media #{$lg} {
+					max-width: 48%;
+				}
+				@media #{$xs} {
+					display: none;
+				}
+			}
+		}
+	}
+}

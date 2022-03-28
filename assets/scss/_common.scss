@@ -1,0 +1,209 @@
+/*===========================
+    1. COMMON css 
+===========================*/
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Poppins:400,500,500i,600i,700,700i|Rubik&display=swap');
+
+body {
+	font-family: $hee;
+	font-weight: normal;
+	font-style: normal;
+	color: $body-text;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+
+img {
+	max-width: 100%;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+.slick-initialized .slick-slide:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+}
+
+i,
+span,
+a {
+	display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $pop;
+	font-weight: 700;
+	color: $heading-color;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul,
+ol {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+p {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 27px;
+	color: $body-text;
+	margin: 0px;
+	font-family: $hee;
+}
+
+.bg_cover {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+/*others common css here*/
+
+/*===== All Button Style =====*/
+
+.main-btn {
+	display: inline-block;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	@include user-select(none);
+	border: 1px solid $theme-color-2;
+	padding: 0 43px;
+	font-size: 15px;
+	line-height: 50px;
+	border-radius: 30px;
+	color: $black;
+	cursor: pointer;
+	z-index: 5;
+	font-family: $pop;
+	@include transition(0.4s);
+	background-color: $theme-color-2;
+
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+	}
+
+	&.main-btn-2 {
+		background-color: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+		&:hover {
+			background-color: $theme-color-2;
+			border-color: $theme-color-2;
+			color: $black;
+		}
+	}
+	&.main-btn-3 {
+		background-color: $white;
+		color: $heading-color;
+		border-color: $white;
+		&:hover {
+			background-color: $theme-color;
+			border-color: $theme-color;
+			color: $white;
+		}
+	}
+	&.play-btn {
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		color: $white;
+		position: relative;
+		padding-left: 70px;
+		i {
+			height: 50px;
+			width: 50px;
+			text-align: center;
+			border: 1px solid $white;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+.section-title {
+	& img {
+		padding-bottom: 25px;
+	}
+	& .title {
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 60px;
+		font-family: $pop;
+		@media #{$lg} {
+			font-size: 40px;
+			line-height: 50px;
+		}
+		@media #{$md} {
+			font-size: 40px;
+			line-height: 50px;
+		}
+		@media #{$xs} {
+			font-size: 28px;
+			line-height: 38px;
+		}
+		@media #{$sm} {
+			font-size: 40px;
+			line-height: 50px;
+		}
+	}
+	& span {
+		font-weight: 700;
+		font-family: $pop;
+		color: $theme-color;
+		padding-top: 15px;
+		padding-bottom: 47px;
+	}
+	&.section-title-2 {
+		span {
+			padding-top: 0;
+			padding-bottom: 15px;
+		}
+		& .title {
+			padding-bottom: 49px;
+		}
+	}
+}

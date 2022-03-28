@@ -1,0 +1,123 @@
+/*===========================
+    PLAY css 
+===========================*/
+.play-area {
+	z-index: 11;
+	position: relative;
+	& .play-thumb {
+		position: relative;
+		width: 100%;
+		height: 557px;
+		background-position: center;
+		background-size: cover;
+		& .play-item {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(39, 158, 100, 0.5);
+			& a {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				height: 95px;
+				width: 95px;
+				text-align: center;
+				line-height: 95px;
+				background-color: rgba(253, 253, 253, 0.7);
+				border-radius: 50%;
+				font-size: 18px;
+				color: $theme-color;
+			}
+		}
+	}
+	& .play-quote {
+		background: #13287d;
+		padding: 0 40px;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		form {
+			width: 100%;
+		}
+		@media #{$md} {
+			padding: 37px 20px 44px;
+		}
+		@media #{$xs} {
+			padding: 37px 20px 52px;
+		}
+		& .quote-title {
+			& .title {
+				color: $white;
+				font-size: 30px;
+				text-transform: capitalize;
+				padding-bottom: 13px;
+				@media #{$lg} {
+					font-size: 25px;
+				}
+				@media #{$md} {
+					font-size: 26px;
+				}
+				@media #{$xs} {
+					font-size: 26px;
+				}
+			}
+		}
+		& .play-input {
+			& .input-box {
+				& input {
+					width: 100%;
+					background: $white;
+					line-height: 55px;
+					border: 0;
+					border-radius: 5px;
+					padding-left: 20px;
+					font-size: 14px;
+					color: $body-text;
+					&::placeholder {
+						opacity: 1;
+					}
+				}
+				& textarea {
+					width: 100%;
+					height: 105px;
+					background: $white;
+					border: 0;
+					border-radius: 5px;
+					padding-left: 20px;
+					padding-top: 15px;
+					font-size: 14px;
+					color: $body-text;
+					&::placeholder {
+						opacity: 1;
+					}
+				}
+				& button {
+					width: 100%;
+					background: $theme-color-2;
+					border: 0;
+					border-radius: 5px;
+					line-height: 55px;
+					color: $body-text;
+					margin-top: 20px;
+					font-family: $pop;
+					font-weight: 700;
+					color: $black;
+				}
+				& .nice-select {
+					width: 100%;
+					margin-bottom: 20px;
+					line-height: 55px;
+					height: 55px;
+					border: 0;
+					& .list {
+						margin-top: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

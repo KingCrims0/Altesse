@@ -1,0 +1,74 @@
+/*===========================
+    Feature List css
+===========================*/
+.feature-list-area {
+	.feature-content {
+		padding-top: 30px;
+		@media #{$lg} {
+			margin-bottom: 50px;
+		}
+		@media #{$md} {
+			margin-bottom: 50px;
+		}
+		@media #{$xs} {
+			margin-bottom: 50px;
+		}
+		span {
+			color: $theme-color;
+			font-family: $pop;
+			font-weight: 700;
+			padding-bottom: 15px;
+		}
+		.title {
+			font-size: 48px;
+			line-height: 60px;
+			margin-bottom: 30px;
+			@media #{$md} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+			@media #{$xs} {
+				font-size: 28px;
+				line-height: 38px;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+		a.main-btn {
+			margin-top: 50px;
+		}
+	}
+	.feature-list-wrap {
+		position: relative;
+		padding-left: 450px;
+		@media #{$xs} {
+			padding-left: 0;
+		}
+		.feature-list-img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			@media #{$xs} {
+				position: unset;
+				margin-bottom: 40px;
+			}
+		}
+		.feature-list {
+			li {
+				margin-bottom: 20px;
+				i {
+					color: $theme-color;
+					font-size: 40px;
+					margin-bottom: 10px;
+				}
+				h4 {
+					color: $heading-color;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

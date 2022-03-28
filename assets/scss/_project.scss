@@ -1,0 +1,156 @@
+/*===========================
+    PROJECT css 
+===========================*/
+.finished-Poject-area {
+	padding-top: 123px;
+	& .project-menu {
+		& ul {
+			& li {
+				display: inline-block;
+				cursor: pointer;
+				line-height: 40px;
+				color: $heading-color;
+				border: 1px solid #dcdfe2;
+				border-radius: 30px;
+				font-size: 15px;
+				font-weight: 600;
+				font-family: $pop;
+				padding: 0 38px;
+				margin-right: 18px;
+				@media #{$lg} {
+					padding: 0 28px;
+					margin-right: 10px;
+				}
+				@media #{$xs} {
+					padding: 0 12px;
+					font-size: 13px;
+					margin-right: 0;
+				}
+				@media #{$sm} {
+					padding: 0 26px;
+				}
+
+				&.active {
+					background: $theme-color;
+					color: $white;
+					border-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+.finished-Poject-thumb {
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+	& img {
+		width: 100%;
+		@include transform(scale(1));
+		@include transition(0.3s);
+	}
+	&::before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(19, 40, 125, 0.9);
+		@include transition(0.3s);
+		z-index: 5;
+		opacity: 0;
+	}
+	.hover-action {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		transform: translate(0%, -50%);
+		z-index: 6;
+		@include transition(0.3s);
+		visibility: hidden;
+		opacity: 0;
+		a {
+			height: 55px;
+			width: 55px;
+			border-radius: 50%;
+			line-height: 55px;
+			text-align: center;
+			color: $white;
+			border: 1px solid $white;
+			@include transition(0.3s);
+			font-size: 18px;
+			margin: 0 4px;
+			&:hover {
+				background-color: $theme-color;
+				border-color: $theme-color;
+			}
+		}
+	}
+	&:hover {
+		.hover-action {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	& .finished-Poject-content {
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+		@include transition(0.3s);
+		z-index: 6;
+		opacity: 0;
+		& .title {
+			color: $white;
+			font-size: 22px;
+			font-weight: 700;
+			font-family: $pop;
+			@media #{$md} {
+				font-size: 18px;
+			}
+		}
+		& a {
+			color: $white;
+			font-size: 15px;
+			font-weight: 700;
+			font-family: $pop;
+			margin-top: 25px;
+			@media #{$md} {
+				margin-top: 10px;
+			}
+			& i {
+				margin-left: 13px;
+				height: 45px;
+				width: 45px;
+				text-align: center;
+				line-height: 45px;
+				@include transition(0.3s);
+			}
+			&:hover {
+				& i {
+					background: $theme-color;
+				}
+			}
+		}
+	}
+	&:hover {
+		& img {
+			@include transform(scale(1.1));
+		}
+		&::before {
+			opacity: 1;
+		}
+		& .finished-Poject-content {
+			opacity: 1;
+		}
+	}
+}
+.finished-Poject-content.no-hover {
+	margin-top: 20px;
+	span.project-date {
+		font-size: 14px;
+		font-weight: 500;
+		padding-top: 10px;
+	}
+}

@@ -1,0 +1,135 @@
+/*===========================
+   ABOUT css 
+===========================*/
+.about-area {
+	background: #eff2f7;
+	position: relative;
+	@media #{$xs} {
+		padding-top: 650px;
+	}
+	&::before {
+		position: absolute;
+		content: '';
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 45%;
+		background-image: url(../images/about-side.jpg);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		@media #{$md} {
+			width: 37%;
+		}
+		@media #{$xs} {
+			width: 100%;
+			height: 600px;
+		}
+	}
+	& .about-content {
+		& span {
+			color: $theme-color;
+			font-family: $pop;
+			font-weight: 700;
+			padding-bottom: 16px;
+		}
+		& .title {
+			font-size: 48px;
+			line-height: 60px;
+			@media #{$lg} {
+				font-size: 38px;
+				line-height: 50px;
+			}
+			@media #{$md} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+			@media #{$xs} {
+				font-size: 28px;
+				line-height: 38px;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+		& p {
+			font-size: 15px;
+			line-height: 27px;
+			padding-top: 27px;
+			padding-bottom: 29px;
+		}
+	}
+	& .about-experience {
+		& .about-item {
+			& p {
+				font-size: 15px;
+				line-height: 27px;
+				margin-left: -10px;
+				@media #{$md} {
+					margin-left: 0;
+				}
+				@media #{$xs} {
+					margin-left: 0;
+				}
+			}
+			& .title {
+				font-size: 36px;
+				line-height: 36px;
+				@media #{$lg} {
+					font-size: 26px;
+				}
+				@media #{$md} {
+					padding-bottom: 15px;
+				}
+				@media #{$xs} {
+					padding-bottom: 15px;
+					font-size: 28px;
+					line-height: 32px;
+				}
+				& span {
+					font-size: 80px;
+					color: $theme-color;
+					@media #{$md} {
+						padding-bottom: 25px;
+					}
+					@media #{$xs} {
+						padding-bottom: 25px;
+					}
+				}
+			}
+		}
+	}
+	&.design-two {
+		@media #{$xs} {
+			padding-top: 124px;
+		}
+		&::before {
+			display: none;
+		}
+		background: transparent;
+		.about-img {
+			position: relative;
+			z-index: 1;
+			@media #{$md} {
+				text-align: center;
+				margin-bottom: 50px;
+			}
+			@media #{$xs} {
+				text-align: center;
+				margin-bottom: 50px;
+			}
+			.about-shape {
+				position: absolute;
+				right: -40px;
+				top: -40px;
+				z-index: -1;
+				height: 100%;
+				@media #{$xs} {
+					right: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,138 @@
+/*===========================
+    FAQ CSS
+===========================*/
+.faq-area {
+	position: relative;
+	min-height: 1015px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media #{$xs} {
+		min-height: auto;
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+	@media #{$lg} {
+		max-height: 900px;
+	}
+	@media #{$md} {
+		align-items: flex-end;
+		padding-bottom: 80px;
+		min-height: 1450px;
+	}
+	.faq-img {
+		position: absolute;
+		left: 80px;
+		top: 50%;
+		transform: translateY(-50%);
+		max-width: 50%;
+		@media #{$laptop} {
+			max-width: 30%;
+		}
+		@media #{$lg} {
+			max-width: 32%;
+		}
+		@media #{$md} {
+			left: 50%;
+			top: 130px;
+			transform: translate(-50%, 0);
+			max-width: 380px;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
+
+.faq-wrap {
+	position: relative;
+	.faq-title {
+		span {
+			color: $theme-color;
+			font-family: $pop;
+			font-weight: 700;
+			padding-bottom: 16px;
+		}
+		.title {
+			font-size: 48px;
+			line-height: 60px;
+			@media #{$xs} {
+				font-size: 28px;
+				line-height: 38px;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+	}
+	.faq-accordion {
+		.card {
+			border: none;
+			border-bottom: 1px solid #dcdfe2 !important;
+			.card-header {
+				background-color: transparent;
+				border: none;
+				padding: 40px 0;
+				position: relative;
+				button {
+					font-size: 22px;
+					color: $heading-color;
+					font-family: $pop;
+					font-weight: 700;
+					border: none;
+					background-color: transparent;
+					width: 100%;
+					text-align: left;
+					.open-icon,
+					.close-icon {
+						position: absolute;
+						height: 45px;
+						width: 45px;
+						right: 0;
+						top: 50%;
+						line-height: 45px;
+						text-align: center;
+						@include transition(0.3s);
+						transform: translateY(-50%);
+					}
+					.close-icon {
+						display: none;
+					}
+					.open-icon {
+						display: block;
+					}
+					&.active-accordion {
+						.close-icon {
+							display: block;
+						}
+						.open-icon {
+							display: none;
+						}
+					}
+					@media #{$xs} {
+						font-size: 20px;
+					}
+					@media #{$sm} {
+						font-size: 22px;
+					}
+				}
+				&:hover,
+				button.active-accordion {
+					.open-icon,
+					.close-icon {
+						box-shadow: 0px 10px 30px 0px rgba(39, 158, 100, 0.5);
+						background-color: $theme-color;
+						color: $white;
+					}
+				}
+			}
+			.card-body {
+				padding: 0 0 40px 0;
+			}
+			&:last-child {
+				border: none !important;
+			}
+		}
+	}
+}

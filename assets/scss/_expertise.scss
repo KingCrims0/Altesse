@@ -1,0 +1,224 @@
+/*===========================
+    EXPERTISE css 
+===========================*/
+.expertise-area {
+	& .expertise-thumb {
+		@media #{$lg} {
+			margin-right: 0;
+		}
+		@media #{$md} {
+			margin-right: 0;
+		}
+		@media #{$xs} {
+			margin-right: 0;
+		}
+		position: relative;
+
+		& img {
+			width: 100%;
+		}
+
+		& .expertise-item {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background: #ffc600;
+			padding: 0 56px;
+			border-radius: 5px;
+			@media #{$md} {
+				padding: 0 30px;
+			}
+
+			& .title {
+				color: $white;
+				font-size: 45px;
+				padding-top: 20px;
+				@media #{$md} {
+					padding-top: 10px;
+					font-size: 36px;
+				}
+			}
+
+			& span {
+				font-family: $pop;
+				font-size: 15px;
+				font-weight: 700;
+				color: $white;
+				padding-bottom: 25px;
+				@media #{$md} {
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	& .expertise-content {
+		& span {
+			color: $theme-color;
+			font-weight: 700;
+			font-family: $pop;
+			@media #{$xs} {
+				margin-top: 40px;
+			}
+		}
+		& .title {
+			font-size: 48px;
+			line-height: 60px;
+			padding-top: 16px;
+			padding-bottom: 43px;
+			@media #{$lg} {
+				font-size: 42px;
+			}
+			@media #{$md} {
+				font-size: 36px;
+				line-height: 44px;
+			}
+			@media #{$xs} {
+				font-size: 28px;
+				line-height: 38px;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+	}
+
+	&.service-page {
+		background-color: #eff2f7;
+		position: relative;
+		.expertise-thumb {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 44%;
+			@media #{$md} {
+				position: unset;
+				margin-bottom: 55px;
+				width: 100%;
+				height: 500px;
+				margin-top: -130px;
+			}
+			@media #{$xs} {
+				position: unset;
+				margin-bottom: 55px;
+				width: 100%;
+				height: 500px;
+				margin-top: -130px;
+				display: flex;
+				align-items: flex-end;
+			}
+			.expertise-item {
+				background-color: $theme-color;
+				position: unset;
+				display: inline-block;
+				padding: 40px 30px;
+				h3 {
+					font-size: 27px;
+					line-height: 36px;
+					padding: 0;
+					span {
+						display: inline-block;
+						padding: 0;
+						font-size: 60px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.skills {
+	position: relative;
+
+	& .skill-item {
+		position: relative;
+		margin-bottom: 46px;
+
+		& .skill-header {
+			position: relative;
+			margin-bottom: 10px;
+
+			& .skill-title {
+				font-size: 15px;
+				font-weight: 400;
+				margin-bottom: 0;
+				color: $heading-color;
+				opacity: 0.8;
+				padding-bottom: 10px;
+			}
+
+			& .skill-percentage {
+				position: absolute;
+				right: 0;
+				top: 1px;
+				font-size: 15px;
+				font-weight: 600;
+				color: #ff5e14;
+
+				& .count-box {
+					font-weight: 500;
+					font-size: 15px;
+					font-family: $hee;
+					color: $heading-color;
+
+					& span {
+						font-weight: 500;
+						font-size: 15px;
+						font-family: $hee;
+						color: $heading-color;
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		& .skill-bar {
+			position: relative;
+			width: 100%;
+
+			& .bar-inner {
+				position: relative;
+				width: 100%;
+				border-top: 15px solid #eeeff2;
+				border-bottom: 15px solid #eeeff2;
+				border-radius: 0px;
+
+				& .bar {
+					position: absolute;
+					left: 0;
+					top: -12px;
+					width: 0;
+					height: 30px;
+					background: $theme-color;
+					-webkit-transition: all 2000ms ease;
+					transition: all 2000ms ease;
+					border-radius: 0px;
+					margin-top: -3px;
+				}
+			}
+		}
+		&.item-2 {
+			& .skill-bar {
+				& .bar-inner {
+					& .bar {
+						background: $theme-color-2;
+					}
+				}
+			}
+		}
+		&.item-3 {
+			& .skill-bar {
+				& .bar-inner {
+					& .bar {
+						background: $heading-color;
+					}
+				}
+			}
+		}
+	}
+}
